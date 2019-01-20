@@ -1,0 +1,30 @@
+{
+    "name": "premote",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node node_modules/react-native/local-cli/cli.js start",
+        "test": "jest",
+        "release": "cd android && ./gradlew assembleRelease && cp ./app/build/outputs/apk/release/app-release.apk ../build/premote-android.apk",
+        "emulator": "emulator -avd Pixel_2_API_25 -netdelay none -netspeed full -camera-back webcam0 &",
+        "dev": "react-native run-android",
+        "logs": "react-native log-android"
+    },
+    "dependencies": {
+        "react": "16.6.3",
+        "react-native": "0.57.8",
+        "react-native-button": "^2.3.0",
+        "react-native-camera": "^1.9.0",
+        "react-native-websocket": "^1.0.2",
+        "socket.io-client": "^2.2.0"
+    },
+    "devDependencies": {
+        "babel-jest": "23.6.0",
+        "jest": "23.6.0",
+        "metro-react-native-babel-preset": "0.51.1",
+        "react-test-renderer": "16.6.3"
+    },
+    "jest": {
+        "preset": "react-native"
+    }
+}
